@@ -1,0 +1,1 @@
+export 'package:base_getx/presentation/home/home.screen.dart';
