@@ -4,8 +4,8 @@
 // ignore: avoid_classes_with_only_static_members
 class AppTranslation {
   static Map<String, Map<String, String>> translations = {
-    'en': Locales.en,
-    'vi': Locales.vi,
+    'en': Locales.en as Map<String, String>,
+    'vi': Locales.vi as Map<String, String>,
   };
 }
 
