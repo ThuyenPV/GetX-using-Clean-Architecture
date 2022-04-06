@@ -1,7 +1,7 @@
-import 'package:base_getx/domain/core/resource/app_colors.dart';
-import 'package:base_getx/domain/core/resource/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:base_getx/app/core/resource/app_colors.dart';
+import 'package:base_getx/app/core/resource/app_styles.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData lightThemeData(BuildContext context) {
@@ -38,17 +38,13 @@ ThemeData lightThemeData(BuildContext context) {
       headline4: AppStyles.largeHeading6,
       headline5: AppStyles.largeHeading7,
       headline6: AppStyles.largeSubtitle1,
-      // subtitle1: GoogleFonts.inter(),
-      // subtitle2: GoogleFonts.inter(),
       bodyText1: AppStyles.smallSmall.copyWith(
         color: Colors.white,
       ),
       bodyText2: AppStyles.smallSmall.copyWith(
         color: AppColors.blue,
       ),
-      // caption: GoogleFonts.inter(),
       button: AppStyles.largeSubtitle1,
-      // overline: GoogleFonts.inter(),
     ),
   );
 }

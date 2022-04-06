@@ -1,21 +1,35 @@
+import 'package:base_getx/domain/model/category.dart';
+import 'package:base_getx/presentation/home/providers/home_provider.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  final HomeProvider homeProvider;
 
-  final count = 0.obs;
+  HomeController({required this.homeProvider});
+
+  RxList<CategoryModel> categories = RxList([]);
+  RxBool isCategoryLoading = RxBool(false);
+
   @override
   void onInit() {
+    getAllCategories();
     super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
   }
 
   @override
   void onClose() {}
 
-  void increment() => count.value++;
+  void getAllCategories() {
+    isCategoryLoading.value = true;
+    try {
+      categories.clear();
+      homeProvider.getCategories().then((response) {
+        categories.addAll(response);
+      });
+    } catch (e) {
+      // Handle error message
+    } finally {
+      isCategoryLoading.value = false;
+    }
+  }
 }

@@ -1,12 +1,13 @@
 class Environments {
   static const String PRODUCTION = 'prod';
-  static const String QAS = 'QAS';
+  static const String QA = 'QA';
   static const String DEV = 'dev';
   static const String LOCAL = 'local';
 }
 
 class ConfigEnvironments {
   static const String _currentEnvironments = Environments.LOCAL;
+
   static final List<Map<String, String>> _availableEnvironments = [
     {
       'env': Environments.LOCAL,
@@ -17,7 +18,7 @@ class ConfigEnvironments {
       'url': '',
     },
     {
-      'env': Environments.QAS,
+      'env': Environments.QA,
       'url': '',
     },
     {
@@ -28,7 +29,7 @@ class ConfigEnvironments {
 
   static Map<String, String> getEnvironments() {
     return _availableEnvironments.firstWhere(
-      (d) => d['env'] == _currentEnvironments,
+      (element) => element['env'] == _currentEnvironments,
     );
   }
 }
