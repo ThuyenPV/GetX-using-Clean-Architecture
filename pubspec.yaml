@@ -9,7 +9,7 @@ dependencies:
   get_storage: ^2.0.3
   dio: ^4.0.4
   cupertino_icons: ^1.0.2
-  google_fonts: ^2.1.0
+  google_fonts: ^3.0.0
   get: 4.6.1
   flutter: 
     sdk: flutter
